@@ -1,0 +1,42 @@
+server:
+  port: 6950
+
+spring:
+
+  #database
+  datasource:
+    url: jdbc:mysql:///springboot
+    username: root
+    password: MYSQL695
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  #redis
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      lettuce:
+        pool:
+          max-active: 8
+          max-idle: 8
+          min-idle: 8
+          max-wait: 100
+
+
+
+
+####################
+#para
+say: "nmsl"
+
+#map
+person:
+  name: "yongyunqing"
+  age: 19
+  say: ${say}
+
+#array
+fruit:
+  - "apple"
+  - "pear"
+  - "peach"
